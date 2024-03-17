@@ -7,6 +7,7 @@ type ColorBook = {
   slug: string;
   originalColors: (string | null)[];
   fillColors: (string | null)[];
+  difficulty: "easy" | "medium" | "hard";
 };
 
 type V1Store = {
@@ -32,49 +33,6 @@ const storage: StateStorage = {
   },
 };
 
-// export const useV1Store = create(
-//   persist<V1Store>(
-//     (set, get) => ({
-//       currentBook: "",
-//       currentColor: "",
-//       colorBooks: [
-//         {
-//           title: "Sun Flower",
-//           slug: "sunflower",
-//           originalColors: Array.from({ length: 21 }, () => "#F9F6EE"),
-//           fillColors: Array.from({ length: 21 }, () => "#F9F6EE"),
-//         },
-//       ],
-//       getBook: (book) => {
-//         return get().colorBooks.find((b) => b.slug === book);
-//       },
-//       setCurrentBook: (book) => set({ currentBook: book }),
-//       setCurrentColor: (color) => set({ currentColor: color }),
-//       changeColor: (color, index) => {
-//         const book = get().colorBooks.find(
-//           (book) => book.title === get().currentBook
-//         );
-//         if (!book) {
-//           console.error(`No book found with title: ${get().currentBook}`);
-//           return;
-//         }
-//         const newColors = [...book.fillColors];
-//         newColors[index] = color;
-//         set({
-//           colorBooks: get().colorBooks.map((book) =>
-//             book.title === get().currentBook
-//               ? { ...book, fillColors: newColors }
-//               : book
-//           ),
-//         });
-//       },
-//     }),
-//     {
-//       name: "v1",
-//       storage: createJSONStorage(() => storage),
-//     }
-//   )
-// );
 export const useV1Store = create<V1Store>((set, get) => ({
   currentBook: "",
   currentColor: "",
@@ -84,18 +42,35 @@ export const useV1Store = create<V1Store>((set, get) => ({
       slug: "sunflower",
       originalColors: Array.from({ length: 21 }, () => "#F9F6EE"),
       fillColors: Array.from({ length: 21 }, () => "#F9F6EE"),
+      difficulty: "medium",
     },
     {
       title: "Burger Fries",
       slug: "burgerfries",
       originalColors: Array.from({ length: 116 }, () => null),
       fillColors: Array.from({ length: 116 }, () => null),
+      difficulty: "hard",
     },
     {
       title: "Pupper Bowl",
       slug: "pupperbowl",
-      originalColors: Array.from({ length: 19 }, () => null),
-      fillColors: Array.from({ length: 19 }, () => null),
+      originalColors: Array.from({ length: 5 }, () => null),
+      fillColors: Array.from({ length: 5 }, () => null),
+      difficulty: "easy",
+    },
+    {
+      title: "Crabbie",
+      slug: "crabbie",
+      originalColors: Array.from({ length: 20 }, () => null),
+      fillColors: Array.from({ length: 20 }, () => null),
+      difficulty: "medium",
+    },
+    {
+      title: "The Cat House",
+      slug: "cathouse",
+      originalColors: Array.from({ length: 83 }, () => null),
+      fillColors: Array.from({ length: 83 }, () => null),
+      difficulty: "hard",
     },
   ],
   getBook: (book) => {

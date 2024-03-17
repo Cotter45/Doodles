@@ -16,13 +16,13 @@ export default function ColoringBooks() {
       stars: 1,
       description: "Simple designs for beginners",
       minClicks: 0,
-      maxClicks: 25,
+      maxClicks: 15,
     },
     medium: {
       title: "Medium",
       stars: 2,
       description: "More complex designs for intermediate artists",
-      minClicks: 26,
+      minClicks: 16,
       maxClicks: 50,
     },
     hard: {
@@ -88,7 +88,7 @@ export default function ColoringBooks() {
               href={`/color?book=${book.slug}`}
               className="group text-sm"
             >
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75 h-96">
                 <ColoringBookImage slug={book.slug} />
               </div>
               <h3 className="mt-4 font-medium text-gray-900">{book.title}</h3>
