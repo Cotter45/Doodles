@@ -12,6 +12,9 @@ export default function Unicorns({
       x="0px"
       y="0px"
       viewBox="0 0 500 500"
+      style={{
+        maxHeight: "100dvh",
+      }}
     >
       <g id="OBJECTS">
         <g>
