@@ -91,6 +91,12 @@ export const useV1Store = create<V1Store>((set, get) => ({
       originalColors: Array.from({ length: 116 }, () => null),
       fillColors: Array.from({ length: 116 }, () => null),
     },
+    {
+      title: "Pupper Bowl",
+      slug: "pupperbowl",
+      originalColors: Array.from({ length: 19 }, () => null),
+      fillColors: Array.from({ length: 19 }, () => null),
+    },
   ],
   getBook: (book) => {
     return get().colorBooks.find((b) => b.slug === book);
