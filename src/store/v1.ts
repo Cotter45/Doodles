@@ -42,7 +42,7 @@ export const useV1Store = create<V1Store>((set, get) => ({
       slug: "sunflower",
       originalColors: Array.from({ length: 21 }, () => "#F9F6EE"),
       fillColors: Array.from({ length: 21 }, () => "#F9F6EE"),
-      difficulty: "medium",
+      difficulty: "easy",
     },
     {
       title: "Burger Fries",
@@ -71,6 +71,13 @@ export const useV1Store = create<V1Store>((set, get) => ({
       originalColors: Array.from({ length: 83 }, () => null),
       fillColors: Array.from({ length: 83 }, () => null),
       difficulty: "hard",
+    },
+    {
+      title: "Unicorn Party",
+      slug: "unicorns",
+      originalColors: Array.from({ length: 83 }, () => null),
+      fillColors: Array.from({ length: 83 }, () => null),
+      difficulty: "medium",
     },
   ],
   getBook: (book) => {

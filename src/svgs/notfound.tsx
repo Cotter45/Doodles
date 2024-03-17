@@ -3,9 +3,7 @@ export default function NotFound404() {
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="626.000000pt"
-      height="626.000000pt"
-      viewBox="0 0 626.000000 626.000000"
+      viewBox="0 0 626 626"
       preserveAspectRatio="xMidYMid meet"
     >
       <g

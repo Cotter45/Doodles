@@ -10,38 +10,10 @@ import { StarIcon } from "@heroicons/react/16/solid";
 export default function ColoringBooks() {
   const colorBooks = useV1Store((state) => state.colorBooks);
 
-  const difficultyMap: any = {
-    easy: {
-      title: "Easy",
-      stars: 1,
-      description: "Simple designs for beginners",
-      minClicks: 0,
-      maxClicks: 15,
-    },
-    medium: {
-      title: "Medium",
-      stars: 2,
-      description: "More complex designs for intermediate artists",
-      minClicks: 16,
-      maxClicks: 50,
-    },
-    hard: {
-      title: "Hard",
-      stars: 3,
-      description: "Intricate designs for advanced artists",
-      minClicks: 51,
-      maxClicks: 1000,
-    },
-  };
-
   const [selectedDifficulty, setSelectedDifficulty] = useState("easy");
-  const colorBooksByDifficulty = colorBooks.filter((book) => {
-    const bookLength = book.originalColors.length;
-    return (
-      bookLength <= difficultyMap[selectedDifficulty].maxClicks &&
-      bookLength >= difficultyMap[selectedDifficulty].minClicks
-    );
-  });
+  const colorBooksByDifficulty = colorBooks.filter(
+    (book) => book.difficulty === selectedDifficulty
+  );
 
   if (!colorBooks || !colorBooks.length) {
     return (
@@ -56,7 +28,7 @@ export default function ColoringBooks() {
       {/* add star filters to select difficulty */}
       <div className="flex justify-center items-center space-x-4 p-4">
         <h3 className="text-xl font-semibold">Difficulty:</h3>
-        {Object.keys(difficultyMap).map((difficulty) => (
+        {["easy", "medium", "hard"].map((difficulty) => (
           <button
             key={difficulty}
             onClick={() => setSelectedDifficulty(difficulty)}
