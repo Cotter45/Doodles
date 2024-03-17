@@ -8,9 +8,11 @@ export default function ColorPage({
 }) {
   const book = searchParams.book;
   return (
-    <main className="relative min-w-screen min-h-screen flex flex-col justify-center items-center">
+    <main className="relative min-w-screen min-h-screen flex flex-col">
       <BackButton />
-      <Color book={book} />
+      <div className="min-w-screen min-h-screen flex flex-col justify-center items-center">
+        <Color book={book} />
+      </div>
     </main>
   );
 }

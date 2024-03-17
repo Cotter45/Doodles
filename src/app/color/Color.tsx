@@ -73,7 +73,7 @@ export default function Color({ book }: { book: string }) {
     <>
       <SVG fillColors={fillColors} onFill={changeColor} />
 
-      <div className="fixed bottom-4 left-4 flex space-x-4">
+      <div className="fixed bottom-8 md:bottom-4 left-4 flex space-x-4">
         <button
           onClick={undo}
           className="flex items-center gap-2 border px-2 py-1 rounded-md hover:bg-gray-100"

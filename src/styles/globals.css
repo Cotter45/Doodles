@@ -5,3 +5,13 @@
 * {
   user-select: none;
 }
+
+.icon-container::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 120%;
+  border-top: 1px solid black;
+  transform: rotate(45deg);
+}
