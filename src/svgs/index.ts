@@ -4,6 +4,7 @@ import PupperBowl from "./pupperbowl";
 import Crabbie from "./crab";
 import CatHouse from "./cathouse";
 import Unicorns from "./unicorns";
+import FlowerPals from "./flowerpals";
 
 export const SVGS: { [key: string]: React.ElementType } = {
   sunflower: SunFlower,
@@ -12,4 +13,5 @@ export const SVGS: { [key: string]: React.ElementType } = {
   crabbie: Crabbie,
   cathouse: CatHouse,
   unicorns: Unicorns,
+  flowerpals: FlowerPals,
 };

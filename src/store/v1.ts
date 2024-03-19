@@ -52,18 +52,18 @@ export const useV1Store = create<V1Store>((set, get) => ({
       difficulty: "hard",
     },
     {
+      title: "Crabbie",
+      slug: "crabbie",
+      originalColors: Array.from({ length: 20 }, () => null),
+      fillColors: Array.from({ length: 20 }, () => null),
+      difficulty: "easy",
+    },
+    {
       title: "Pupper Bowl",
       slug: "pupperbowl",
       originalColors: Array.from({ length: 5 }, () => null),
       fillColors: Array.from({ length: 5 }, () => null),
       difficulty: "easy",
-    },
-    {
-      title: "Crabbie",
-      slug: "crabbie",
-      originalColors: Array.from({ length: 20 }, () => null),
-      fillColors: Array.from({ length: 20 }, () => null),
-      difficulty: "medium",
     },
     {
       title: "The Cat House",
@@ -75,6 +75,13 @@ export const useV1Store = create<V1Store>((set, get) => ({
     {
       title: "Unicorn Party",
       slug: "unicorns",
+      originalColors: Array.from({ length: 83 }, () => null),
+      fillColors: Array.from({ length: 83 }, () => null),
+      difficulty: "medium",
+    },
+    {
+      title: "Flower Pals",
+      slug: "flowerpals",
       originalColors: Array.from({ length: 83 }, () => null),
       fillColors: Array.from({ length: 83 }, () => null),
       difficulty: "medium",
