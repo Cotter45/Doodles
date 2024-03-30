@@ -91,7 +91,7 @@ export const useV1Store = create<V1Store>((set, get) => ({
       slug: "flowerparty",
       originalColors: Array.from({ length: 83 }, () => null),
       fillColors: Array.from({ length: 83 }, () => null),
-      difficulty: "medium",
+      difficulty: "hard",
     },
   ],
   getBook: (book) => {
