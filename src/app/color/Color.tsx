@@ -103,7 +103,10 @@ export default function Color({ book }: { book: string }) {
       <Drawer title={"Select Color"} open={open} setOpen={setOpen}>
         <ColorPicker
           selectedColor={currentColor}
-          onColorSelected={(color) => setCurrentColor(color)}
+          onColorSelected={(color) => {
+            setOpen(false);
+            setCurrentColor(color);
+          }}
         />
       </Drawer>
     </>

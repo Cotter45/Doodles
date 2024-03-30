@@ -33,7 +33,7 @@ const ColorPicker = ({
   };
 
   return (
-    <div className="flex justify-center flex-wrap w-full p-4">
+    <div className="flex justify-center flex-wrap w-full p-4 z-[10000]">
       {colors.map((color) => (
         <div
           key={color}
