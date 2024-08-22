@@ -1,6 +1,7 @@
 export default function NotFound404() {
   return (
     <svg
+      id="svg"
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 626 626"

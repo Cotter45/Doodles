@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Vivus from "vivus";
 
 import { SVGS } from "@/svgs";
 import Crayon from "@/svgs/crayon";
@@ -64,6 +65,16 @@ export default function Color({ book }: { book: string }) {
       setFillColors(state.fillColors);
     }
   }, [book, getBook, setCurrentBook]);
+
+  useEffect(() => {
+    const vivus = new Vivus("svg", {
+      duration: 50,
+      animTimingFunction: Vivus.EASE,
+      type: "delayed",
+    });
+
+    vivus.reset().play();
+  }, [SVG]);
 
   if (!SVG) {
     return <NotFound404 />;

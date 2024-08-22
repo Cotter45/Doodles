@@ -7,8 +7,8 @@ export default function Crabbie({
 }) {
   return (
     <svg
+      id="svg"
       version="1.1"
-      id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 277 309"
       style={{

@@ -7,6 +7,7 @@ export default function SunFlower({
 }) {
   return (
     <svg
+      id="svg"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 750 750"
       style={{ maxHeight: "100dvh", height: "auto" }}
